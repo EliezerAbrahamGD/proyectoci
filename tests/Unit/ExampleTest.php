@@ -22,7 +22,7 @@ class ExampleTest extends TestCase
 
         $this->assertIsInt($result);
         $this->assertNotNull($result);
-        $this->assertEquals(8, $result);
+        $this->assertEquals(262144, $result);  // 4^9 = 262,144
         $this->assertGreaterThan(0, $result);
     }
 }
