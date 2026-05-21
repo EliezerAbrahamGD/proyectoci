@@ -1,0 +1,8 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - app # You can add required folders here
+
+    level: 4 # You can increase levels for more strict checking
