@@ -24,11 +24,6 @@ jobs:
         with:
           php-version: 8.2
 
-      - name: Set permissions
-        run: |
-          mkdir -p storage bootstrap/cache
-          chmod -R 777 storage bootstrap/cache
-
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
@@ -37,6 +32,11 @@ jobs:
 
       - name: Generate app key
         run: php artisan key:generate
+
+      - name: Set permissions
+        run: |
+          mkdir -p storage bootstrap/cache
+          chmod -R 777 storage bootstrap/cache
 
       - name: Run PHPUnit
         run: php artisan test
