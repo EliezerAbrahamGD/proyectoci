@@ -18,6 +18,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Create bootstrap cache directory
+        run: |
+         mkdir -p bootstrap/cache
+         chmod -R 777 bootstrap/cache
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -52,7 +57,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: php-app
-      
+
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -67,4 +72,3 @@ jobs:
           app-name: 'Proyect'
           slot-name: 'Production'
           package: .
-          
