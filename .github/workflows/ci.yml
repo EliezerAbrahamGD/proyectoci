@@ -40,6 +40,12 @@ jobs:
       - name: Copy .env
         run: cp .env.example .env
 
+      - name: Generate app key
+        run: |
+          php artisan key:generate
+          php artisan key:generate --env=testing
+          cat .env | grep APP_KEY
+
       - name: Set permissions
         run: chmod -R 777 storage bootstrap/cache
 
