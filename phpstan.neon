@@ -1,6 +1,4 @@
 includes:
-    - vendor/larastan/larastan/extension.neon
-
 parameters:
     paths:
         - app # You can add required folders here
