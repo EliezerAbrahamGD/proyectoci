@@ -25,4 +25,11 @@ class ExampleTest extends TestCase
         $this->assertEquals(262144, $result);  // 4^9 = 262,144
         $this->assertGreaterThan(0, $result);
     }
+
+    public function test_addition_result(): void
+    {
+        $controller = new OperationsController;
+        $result = $controller->addition(4, 9);
+        $this->assertEquals(13, $result);
+    }
 }
