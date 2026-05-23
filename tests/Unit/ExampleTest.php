@@ -25,6 +25,16 @@ class ExampleTest extends TestCase
         $this->assertEquals(15, $result);
     }
 
+    //Promedio 
+    public function test_average_result(): void
+    {
+    $controller = new OperationsController;
+
+    $result = $controller->average(8, 4);
+
+    $this->assertEquals(6, $result);
+    }
+
     public function test_power_result(): void
     {
         $controller = new OperationsController;
