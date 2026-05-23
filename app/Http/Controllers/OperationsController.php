@@ -13,4 +13,8 @@ class OperationsController extends Controller
     {
         return $a + $b;
     }
+     public function multiplication(int $a, int $b): int
+    {
+        return $a * $b;
+    }
 }
