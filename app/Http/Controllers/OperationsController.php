@@ -17,4 +17,8 @@ class OperationsController extends Controller
     {
         return $a * $b;
     }
+    public function average(int $a, int $b): float
+    {
+    return ($a + $b) / 2;
+    }
 }
