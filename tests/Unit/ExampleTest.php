@@ -15,6 +15,16 @@ class ExampleTest extends TestCase
         $this->assertTrue(true);
     }
 
+    //Multiplicacion 
+    public function test_multiplication_result(): void
+    {
+        $controller = new OperationsController;
+
+        $result = $controller->multiplication(5, 3);
+
+        $this->assertEquals(15, $result);
+    }
+
     public function test_power_result(): void
     {
         $controller = new OperationsController;
