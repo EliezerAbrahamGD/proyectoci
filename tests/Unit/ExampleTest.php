@@ -64,6 +64,17 @@ class ExampleTest extends TestCase
         $this->assertEquals(6, $result);
     }
 
+    //Division
+    public function test_division_result(): void
+    {
+        $controller = new OperationsController;
+
+        $result = $controller->division(20, 5);
+
+        $this->assertEquals(4, $result);
+    }
+
+
     public function test_modulo_result(): void
     {
         $controller = new OperationsController;
