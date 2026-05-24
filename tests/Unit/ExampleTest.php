@@ -52,4 +52,15 @@ class ExampleTest extends TestCase
         $result = $controller->addition(4, 9);
         $this->assertEquals(13, $result);
     }
+
+
+    //Restar 
+    public function test_subtraction_result(): void
+    {
+        $controller = new OperationsController;
+
+        $result = $controller->subtraction(10, 4);
+
+        $this->assertEquals(6, $result);
+    }
 }
