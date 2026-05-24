@@ -83,4 +83,12 @@ class ExampleTest extends TestCase
 
         $this->assertEquals(1, $result);
     }
+    public function test_percentage_result(): void
+{
+    $controller = new OperationsController;
+
+    $result = $controller->percentage(200, 10);
+
+    $this->assertEquals(20, $result);
+}
 }
