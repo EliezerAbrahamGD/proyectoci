@@ -21,4 +21,11 @@ class OperationsController extends Controller
     {
     return ($a + $b) / 2;
     }
+    public function subtraction(int $a, int $b): int
+    {
+        return $a - $b;
+    }
+
+
+    
 }
