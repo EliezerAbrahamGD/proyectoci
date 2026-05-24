@@ -17,6 +17,14 @@ class OperationsController extends Controller
     {
         return $a * $b;
     }
+    public function division(int $a, int $b): float|string
+    {
+        if ($b == 0) {
+            return "Error: división entre cero";
+        }
+
+        return $a / $b;
+    }
     public function average(int $a, int $b): float
     {
     return ($a + $b) / 2;
