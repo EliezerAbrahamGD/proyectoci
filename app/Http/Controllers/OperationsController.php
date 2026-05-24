@@ -25,7 +25,6 @@ class OperationsController extends Controller
     {
         return $a - $b;
     }
-
     public function modulo(int $a, int $b): int
     {
         return $a % $b;
