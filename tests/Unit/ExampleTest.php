@@ -63,4 +63,13 @@ class ExampleTest extends TestCase
 
         $this->assertEquals(6, $result);
     }
+
+    public function test_modulo_result(): void
+    {
+        $controller = new OperationsController;
+
+        $result = $controller->modulo(10, 3);
+
+        $this->assertEquals(1, $result);
+    }
 }
