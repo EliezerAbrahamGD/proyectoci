@@ -50,7 +50,7 @@ class ExampleTest extends TestCase
 
         $this->assertIsInt($result);
         $this->assertNotNull($result);
-        $this->assertEquals(26, $result); // 4^9 = 262144
+        $this->assertEquals(262144, $result); // 4^9 = 262144
         $this->assertGreaterThan(0, $result);
     }
 
